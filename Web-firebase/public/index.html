@@ -11,6 +11,11 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
     <style media="screen">
       body { background-image: url("img/arduino.jpg"); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
       #message { background: white; max-width: 480px; margin: 100px auto 16px; padding: 48px 32px; border-radius: 5px; }
@@ -30,28 +35,67 @@
     <div id="message">
       <h2>Caminder</h2>
       <h1>Set time.</h1>
-      <form action="/action_page.php">
-  		Day:<input type="text" name="day"><br>Month:<input type="text" name="day"><br>Year:<input type="text" name="day"><br>Hour: <input type="text" name="hour"><br>Minute: <input type="text" name="min"><br>Second: <input type="text" name="sec"><br>
- 	 </form>
- 	 <div class="button">
- 	 	<input type="submit" value="Set ">
-  	 </div> 
-</form> 
+      <form id="time-set">
+    		Day:<input type="text" name="day"><br>
+        Month:<input type="text" name="month"><br>
+        Year:<input type="text" name="year"><br>
+        Hour: <input type="text" name="hour"><br>
+        Minute: <input type="text" name="min"><br>
+        Second: <input type="text" name="sec"><br>
+   	 </form>
+   	 <div onclick="sendData()" class="button">
+   	    <input value="Set">
+  	 </div>
+     <p id="error"></p>
     </div>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        firebase.auth().onAuthStateChanged(user => { });
-        firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
         try {
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+
+          firebase.auth().signInAnonymously().catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+          });
+
+          firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+              // User is signed in.
+              var isAnonymous = user.isAnonymous;
+              var uid = user.uid;
+              // ...
+            } else {
+              // User is signed out.
+              // ...
+            }
+            // ...
+          });
+
         } catch (e) {
           console.error(e);
-          document.getElementById('button').innerHTML = 'Error loading the Firebase SDK, check the console.';
+          document.getElementById('error').innerHTML = "Check console"
         }
+
       });
+
+      function sendData () {
+        var day = $('input[name="day"]').val();
+        var month = $('input[name="month"]').val();
+        var year = $('input[name="year"]').val();
+        var hour = $('input[name="hour"]').val();
+        var min = $('input[name="min"]').val();
+        firebase.database().ref('time/day').set(day);
+        firebase.database().ref('time/month').set(month);
+        firebase.database().ref('time/year').set(year);
+        firebase.database().ref('time/hour').set(hour);
+        firebase.database().ref('time/min').set(min);
+
     </script>
   </body>
 </html>
