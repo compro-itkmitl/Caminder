@@ -18,12 +18,12 @@
 
     <style media="screen">
       body { background-image: url("img/arduino.jpg"); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 480px; margin: 100px auto 16px; padding: 48px 32px; border-radius: 5px; }
+      #message { background: white; max-width: 500px; margin: 200px auto 16px; padding: 48px 32px; border-radius: 5px; }
       #message h2 { color: #ffa100; font-weight: bold; font-size: 48px; margin: 0 0 8px; text-align:center;}
-      #message h1 { font-size: 25px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message h1 { font-size: 25px; font-weight: 300; color: rgba(0,0,0,0.6); }
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message form{ margin: 0 0 16px; }
-      .button input{ display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message form{ padding: 10px; margin: 0 0 0 6px; }
+      .button input{ display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 20px; border-radius: 4px; font-size: 20px; margin: 0 0 0 110px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
@@ -34,14 +34,13 @@
   <body>
     <div id="message">
       <h2>Caminder</h2>
-      <h1>Set time.</h1>
+      <h1>ตั้งวันเวลาปลุก</h1>
       <form id="time-set">
     		Day:<input type="text" name="day"><br>
         Month:<input type="text" name="month"><br>
         Year:<input type="text" name="year"><br>
         Hour: <input type="text" name="hour"><br>
         Minute: <input type="text" name="min"><br>
-        Second: <input type="text" name="sec"><br>
    	 </form>
    	 <div onclick="sendData()" class="button">
    	    <input value="Set">
