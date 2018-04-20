@@ -22,8 +22,8 @@
       #message h2 { color: #ffa100; font-weight: bold; font-size: 48px; margin: 0 0 8px; text-align:center;}
       #message h1 { font-size: 25px; font-weight: 300; color: rgba(0,0,0,0.6); }
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message form{ padding: 10px; margin: 0 0 0 6px; }
-      .button input{ display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 20px; border-radius: 4px; font-size: 20px; margin: 0 0 0 110px; }
+      #message form{ padding: 10px; margin: 0 0 0 16px; }
+      .button input{ display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 20px; border-radius: 4px; font-size: 20px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
@@ -36,11 +36,11 @@
       <h2>Caminder</h2>
       <h1>ตั้งวันเวลาปลุก</h1>
       <form id="time-set">
-    		Day:<input type="text" name="day"><br>
-        Month:<input type="text" name="month"><br>
-        Year:<input type="text" name="year"><br>
-        Hour: <input type="text" name="hour"><br>
-        Minute: <input type="text" name="min"><br>
+    		Day:(2 หลัก) <input type="text" name="day"><br>
+        Month:(2 หลัก) <input type="text" name="month"><br>
+        Year:(4 หลัก) <input type="text" name="year"><br>
+        Hour:(2 หลัก) <input type="text" name="hour"><br>
+        Minute:(2 หลัก) <input type="text" name="min"><br>
    	 </form>
    	 <div onclick="sendData()" class="button">
    	    <input value="Set">
@@ -94,7 +94,7 @@
         firebase.database().ref('time/year').set(year);
         firebase.database().ref('time/hour').set(hour);
         firebase.database().ref('time/min').set(min);
-
+      }
     </script>
   </body>
 </html>
