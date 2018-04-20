@@ -25,7 +25,6 @@ void setup() {
   NodeSerial.begin(4800);
 }
 void loop() {
-<<<<<<< HEAD
   String minutes = Firebase.getString("time/min");
   String hours = Firebase.getString("time/hour");
   String days = Firebase.getString("time/day");
@@ -36,19 +35,6 @@ void loop() {
   Serial.print(days);
   Serial.print(months);
   Serial.println(years);
-  /*while (NodeSerial.available() > 0){
-    int val = NodeSerial.parseInt();
-=======
-  int minu = Firebase.getInt("time/min");
-  int hour = Firebase.getInt("time/hour");
-  int day = Firebase.getInt("time/day");
-  int month = Firebase.getInt("time/month");
-  int year = Firebase.getInt("time/year");
-  Serial.println(minu);
-  Serial.println(hour);
-  Serial.println(day);
-  Serial.println(month);
-  Serial.println(year);
   delay(1000);
   /*while (NodeSerial.available() > 0){
     int hour_re = NodeSerial.parseInt();
@@ -56,7 +42,6 @@ void loop() {
     int day_re = NodeSerial.parseInt();
     int month_re = NodeSerial.parseInt();
     int year_re = NodeSerial.parseInt();
->>>>>>> fa664888307b2f37d7b2315b74f6a7811ebe698e
     if(NodeSerial.read() == '\n'){
       Serial.println(hour_re);
     }
