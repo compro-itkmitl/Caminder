@@ -36,11 +36,11 @@
       <h2>Caminder</h2>
       <h1>ตั้งวันเวลาปลุก</h1>
       <form id="time-set">
-    		Day:(2 หลัก) <input type="text" name="day"><br>
-        Month:(2 หลัก) <input type="text" name="month"><br>
-        Year:(4 หลัก) <input type="text" name="year"><br>
-        Hour:(2 หลัก) <input type="text" name="hour"><br>
-        Minute:(2 หลัก) <input type="text" name="min"><br>
+    		Day:(2 หลัก) <input type="number" name="day" min="0" max="31"><br>
+        Month:(2 หลัก) <input type="number" name="month" min="0" max="12"><br>
+        Year:(4 หลัก) <input type="number" name="year" min="1000" max="3000"><br>
+        Hour:(2 หลัก) <input type="number" name="hour" min="0" max="23"><br>
+        Minute:(2 หลัก) <input type="number" name="min" min="0" max="59"><br>
    	 </form>
    	 <div onclick="sendData()" class="button">
    	    <input value="Set">
