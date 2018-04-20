@@ -25,17 +25,22 @@ void setup() {
   NodeSerial.begin(4800);
 }
 void loop() {
-  String minu = Firebase.getString("time/min");
-  String hour = Firebase.getString("time/hour");
-  String day = Firebase.getString("time/day");
-  String month = Firebase.getString("time/month");
-  String year = Firebase.getString("time/year");
-  while (NodeSerial.available() > 0){
+  String minutes = Firebase.getString("time/min");
+  String hours = Firebase.getString("time/hour");
+  String days = Firebase.getString("time/day");
+  String months = Firebase.getString("time/month");
+  String years = Firebase.getString("time/year");
+  Serial.print(minutes);
+  Serial.print(hours);
+  Serial.print(days);
+  Serial.print(months);
+  Serial.println(years);
+  /*while (NodeSerial.available() > 0){
     int val = NodeSerial.parseInt();
     if(NodeSerial.read() == '\n'){
       Serial.println(val);
     }
-  }
+  }*/
 }
 
 
