@@ -18,7 +18,7 @@
       #message h1 { font-size: 25px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
       #message form{ margin: 0 0 16px; }
-      #message,  { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      .button input{ display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
       #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
@@ -26,15 +26,15 @@
       }
     </style>
   </head>
-  <body>
+  <body background="/img/arduino.jpg">
     <div id="message">
       <h2>Caminder</h2>
       <h1>Set time.</h1>
       <form action="/action_page.php">
   		Day:<input type="text" name="day"><br>Month:<input type="text" name="day"><br>Year:<input type="text" name="day"><br>Hour: <input type="text" name="hour"><br>Minute: <input type="text" name="min"><br>Second: <input type="text" name="sec"><br>
  	 </form>
- 	 <div id="button">
- 	 	<input type="submit" value="Set">
+ 	 <div class="button">
+ 	 	<input type="submit" value="Set ">
   	 </div> 
 </form> 
     </div>
