@@ -4,11 +4,11 @@
   - ใช้ Arduino ในการเชื่อม RTC และ NodeMCU
   - สามารถตั้งเวลาใน Web-firebase เพื่อตั้งเวลาปลุกได้
 ---
-# Objective
+## Objective
   - เพื่อบอกวัน เวลา และ อุนหภูมิของสถานที่นั้นๆ
   - ตั้งเวลาการปลุกนอน หรือตั้งเวลาเพื่อแจ้งเตือนตามวันและเวลาต่างๆในระยะไกลได้
 ---
-# Equipment
+## Equipment
   - เริ่มต้นด้วยการหาอุปกรณ์ที่ต้องการ คือ
      - Arduino/Uno
      ![](/Resources/Arduino_1.jpg)
@@ -20,15 +20,13 @@
      ![](/Resources/NodeMCU.jpg)
      - สายไฟ
      ![](/Resources/wire.jpg)
----
-# How to use?
-  - พิมพ์ตั้งเวลาที่จะปลุกหรือแจ้งเตือน
----
-# How to install
+### Installation
   ![](/Resources/installing.jpg)
-
 ---
-# Team Members
+### How to use?
+  - พิมพ์ใน Web-firebase พื่อตั้งเวลาที่จะปลุกหรือแจ้งเตือน
+---
+## Team Members
 |  |ชื่อ นามสกุล|GitHub Username|รหัสนักศึกษา|
 |:-:|---------|---------------|---------|
 |![www.facebook.com/tanakorn.panthaikul](/Resources/ohm.jpg)|Tanakorn Panthaikul|[@Tanakornohm](https://github.com/tanakornohm)|60070017|
@@ -36,7 +34,7 @@
 |![www.facebook.com/nonny](/Resources/nonny.jpg)|Non Ninkham|[@naive555](https://github.com/naive555)|60070036|
 
 ---
-# Teachers
+## Teachers
 |ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
 |![](/Resources/T.Oong.png)|![](/Resources/T.Panwit.png)|
