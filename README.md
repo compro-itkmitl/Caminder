@@ -9,13 +9,20 @@
   - เพื่อบอกวัน เวลา และ อุนหภูมิของสถานที่นั้นๆ
   - ตั้งเวลาการปลุกนอน หรือตั้งเวลาเพื่อแจ้งเตือนตามวันและเวลาต่างๆในระยะไกลได้
   ---
-# Getting Start
+# Equipment
   - เริ่มต้นด้วยการหาอุปกรณ์ที่ต้องการ คือ
-     - Arduino/Uno ![](/Resources/Arduino_1.jpg)
-     - DS3231 RTC ![](/Resources/ds3231.jpg)
-     - I2c LCD ![](/Resources/i2c_lcd.jpg)
-     - NodeMCU ![](/Resources/NodeMCU.jpg)
-     - สายไฟ ![](/Resources/wire.jpg)
+     - Arduino/Uno
+     ![](/Resources/Arduino_1.jpg)
+     - DS3231 RTC
+     ![](/Resources/ds3231.jpg)
+     ![](/Resources/i2c_lcd.jpg)
+     - I2c LCD
+     - NodeMCU
+     ![](/Resources/NodeMCU.jpg)
+     - สายไฟ
+     ![](/Resources/wire.jpg)
+# How to use?
+  - พิมพ์ตั้งเวลาที่จะปลุกหรือแจ้งเตือน
 # Teachers
 |ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
