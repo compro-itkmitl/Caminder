@@ -42,7 +42,6 @@ void setup()
     Serial.println("Setting time");
     setTheTime("003211122042018");     // ssmmhhWDDMMYYYY set time once in the given format
     pinMode(4, OUTPUT);
-
 }
 
 void loop()
@@ -88,7 +87,6 @@ void loop()
         lcd.print("C ");
         prev = now;
     }
-
 }
 
 void setTheTime(char *cmd)
@@ -106,6 +104,19 @@ void setTheTime(char *cmd)
         t.year = inp2toi(cmd, 11) * 100 + inp2toi(cmd, 13);
         DS3231_set(t);
         Serial.println("OK");
+}
+
+void setAlarm(char *cmd)
+{
+  struct ts d;
+
+  d.min = inp2toi(cmd, 0);
+  d.hour = inp2toi(cmd, 2);
+  d.mday = inp2toi(cmd, 4);
+  d.mon = inp2toi(cmd, 6);
+  d.year = inp2toi(cmd, 8) * 100 + inp2toi(cmd, 10);
+  DS3231_set(d);
+  Serial.println("Set Alarm Complete");
 }
 
 void printMonth(int month)
