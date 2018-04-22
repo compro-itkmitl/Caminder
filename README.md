@@ -17,6 +17,7 @@
      ![](/Resources/ds3231.jpg)
      - I2c LCD
      ![](/Resources/i2c_lcd.jpg)
+     
      - NodeMCU
      ![](/Resources/NodeMCU.jpg)
      - สายไฟ
