@@ -23,6 +23,8 @@
      ![](/Resources/wire.jpg)
 # How to use?
   - พิมพ์ตั้งเวลาที่จะปลุกหรือแจ้งเตือน
+# How to install
+  ![](/Resources/installing.jpg)
 # Teachers
 |ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
