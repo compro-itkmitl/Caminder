@@ -1,3 +1,4 @@
+#include <SoftwareSerial.h>
 #include <Wire.h>
 #include <ds3231.h>
 #include <LiquidCrystal_I2C.h>
@@ -16,6 +17,7 @@
 #define  LED_OFF  0
 #define  LED_ON  1
 
+SoftwareSerial ArduinoSerial(9, 8);
 /*-----( Declare objects )-----*/  
 LiquidCrystal_I2C  lcd(I2C_ADDR,En_pin,Rw_pin,Rs_pin,D4_pin,D5_pin,D6_pin,D7_pin);
 //************************************ END LCD DISPLAY *******************************************
@@ -24,15 +26,25 @@ uint8_t time[8];
 char recv[BUFF_MAX];
 unsigned int recv_size = 0;
 unsigned long prev, interval = 1000;
+unsigned int lenAlarmSize = 13;
+String val;
+char* alarm;
+char* p;
+int minute;
+int mon;
+int year;
+int day;
+int hour;
 
 void setup()
 {
+  char* dateAndTime = "504316122042018";
     Serial.begin(9600);
     Wire.begin();
     DS3231_init(DS3231_INTCN);
     memset(recv, 0, BUFF_MAX);
     Serial.println("GET time");
-
+    ArduinoSerial.begin(4800);
   //Set the lcd
    lcd.begin (16,2);  // initialize the lcd 
    // make the blacklight turn on
@@ -40,17 +52,34 @@ void setup()
    lcd.setBacklight(LED_ON);
     
     Serial.println("Setting time");
-    setTheTime("003211122042018");     // ssmmhhWDDMMYYYY set time once in the given format
+    setTheTime(dateAndTime);     // ssmmhhWDDMMYYYY set time once in the given format
     pinMode(4, OUTPUT);
+  
 }
 
 void loop()
 {
+  while (ArduinoSerial.available() > 0){
+    minute = ArduinoSerial.parseInt();
+    hour = ArduinoSerial.parseInt();
+    day = ArduinoSerial.parseInt();
+    mon = ArduinoSerial.parseInt();
+    year = ArduinoSerial.parseInt();
+    if (ArduinoSerial.read() == '\n')
+    {
+      Serial.println(minute);
+      Serial.println(hour);
+      Serial.println(day);
+      Serial.println(mon);
+      Serial.println(year);
+    }
+  }
     char tempF[6]; 
     float temperature;
     char buff[BUFF_MAX];
     unsigned long now = millis();
     struct ts t;
+    struct ts d;
     // show time once in a while
     if (now - prev > interval){
         DS3231_get(&t); //Get time
@@ -87,9 +116,14 @@ void loop()
         lcd.print("C ");
         prev = now;
     }
+    if(t.min == minute && t.hour == hour && t.mday == day && t.mon == mon && t.year == year){
+      digitalWrite(4, HIGH);
+      delay(60000);
+    }
+    digitalWrite(4, LOW);
 }
 
-void setTheTime(char *cmd)
+void setTheTime(char* cmd)
 {
     struct ts t;
 
@@ -104,19 +138,6 @@ void setTheTime(char *cmd)
         t.year = inp2toi(cmd, 11) * 100 + inp2toi(cmd, 13);
         DS3231_set(t);
         Serial.println("OK");
-}
-
-void setAlarm(char *cmd)
-{
-  struct ts d;
-
-  d.min = inp2toi(cmd, 0);
-  d.hour = inp2toi(cmd, 2);
-  d.mday = inp2toi(cmd, 4);
-  d.mon = inp2toi(cmd, 6);
-  d.year = inp2toi(cmd, 8) * 100 + inp2toi(cmd, 10);
-  DS3231_set(d);
-  Serial.println("Set Alarm Complete");
 }
 
 void printMonth(int month)
@@ -138,3 +159,4 @@ void printMonth(int month)
     default: lcd.print(" Error ");break;
   } 
 }
+
