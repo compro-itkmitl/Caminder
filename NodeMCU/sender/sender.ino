@@ -30,11 +30,12 @@ void loop() {
   int days = Firebase.getInt("time/day");
   int months = Firebase.getInt("time/month");
   int years = Firebase.getInt("time/year");
-  Serial.println(minutes);
-  Serial.println(hours);
-  Serial.println(days);
-  Serial.println(months);
-  Serial.println(years);
+  Serial.print(minutes);
+  Serial.print(hours);
+  Serial.print(days);
+  Serial.print(months);
+  Serial.print(years);
+  Serial.print('\n');
   delay(1000);
 }
 
