@@ -33,13 +33,13 @@
   <body>
     <div id="message">
       <h2>Caminder</h2>
-      <h1>ตั้งวันเวลาปลุก(หลักน้อยกว่าใส่ 0 นำหน้า)</h1>
+      <h1>ตั้งวันเวลาปลุก</h1>
       <form id="time-set">
-    	  Day: <input type="text" name="day" maxlength="2" size="2"><br>
-        Month: <input type="text" name="month" maxlength="2" size="2"><br>
-        Year: <input type="text" name="year" maxlength="4" size="4"><br>
-        Hour: <input type="text" name="hour" maxlength="2" size="2"><br>
-        Minute: <input type="text" name="min" maxlength="2" size="2"><br>
+    	  Day: <input type="number" name="day" min="1" max=31><br>
+        Month: <input type="number" name="month" min="0" max="12"><br>
+        Year(ค.ศ.): <input type="number" name="year" min="1000" max="9999"><br>
+        Hour: <input type="number" name="hour" min="0" max="23"><br>
+        Minute: <input type="number" name="min" min="0" max="59"><br>
    	 </form>
    	 <div onclick="sendData()" class="button">
    	    <p>set</p>
