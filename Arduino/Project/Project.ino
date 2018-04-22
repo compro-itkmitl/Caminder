@@ -40,7 +40,8 @@ void setup()
    lcd.setBacklight(LED_ON);
     
     Serial.println("Setting time");
-    setTheTime("505923128022016");     // ssmmhhWDDMMYYYY set time once in the given format
+    setTheTime("003211122042018");     // ssmmhhWDDMMYYYY set time once in the given format
+    pinMode(4, OUTPUT);
 
 }
 
