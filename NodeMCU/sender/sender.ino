@@ -36,6 +36,7 @@ void loop() {
   Serial.print(months);
   Serial.print(years);
   Serial.print('\n');
+  NodeSerial.print(minutes+hours+days+months+years);
   delay(1000);
 }
 
