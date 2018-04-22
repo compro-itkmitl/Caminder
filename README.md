@@ -18,7 +18,7 @@
 # ![](/Resource/Supervisor.png)
 |ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
-|![](/Resources/T.0Oong.png)|![](/Resources/T.Panwit.png)|
+|![](/Resources/T.Oong.png)|![](/Resources/T.Panwit.png)|
 
 รายงานนี้เป็นส่วนหนึ่งของวิชา Computer Programming (รหัส 06016206)
 
