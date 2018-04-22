@@ -35,11 +35,11 @@
       <h2>Caminder</h2>
       <h1>ตั้งวันเวลาปลุก(หลักน้อยกว่าใส่ 0 นำหน้า)</h1>
       <form id="time-set">
-    	Day:(2 หลัก) <input type="number" name="day" min="0" max="31"><br>
-        Month:(2 หลัก) <input type="number" name="month" min="0" max="12"><br>
-        Year:(4 หลัก) <input type="number" name="year" min="1000" max="3000"><br>
-        Hour:(2 หลัก) <input type="number" name="hour" min="0" max="23"><br>
-        Minute:(2 หลัก) <input type="number" name="min" min="0" max="59"><br>
+    	  Day: <input type="text" name="day" maxlength="2" size="2"><br>
+        Month: <input type="text" name="month" maxlength="2" size="2"><br>
+        Year: <input type="text" name="year" maxlength="4" size="4"><br>
+        Hour: <input type="text" name="hour" maxlength="2" size="2"><br>
+        Minute: <input type="text" name="min" maxlength="2" size="2"><br>
    	 </form>
    	 <div onclick="sendData()" class="button">
    	    <p>set</p>
@@ -88,11 +88,11 @@
         var year = $('input[name="year"]').val();
         var hour = $('input[name="hour"]').val();
         var min = $('input[name="min"]').val();
-        firebase.database().ref('time/day').set(parseInt(day));
-        firebase.database().ref('time/month').set(parseInt(month));
-        firebase.database().ref('time/year').set(parseInt(year));
-        firebase.database().ref('time/hour').set(parseInt(hour));
-        firebase.database().ref('time/min').set(parseInt(min));
+        firebase.database().ref('time/day').set(day);
+        firebase.database().ref('time/month').set(month);
+        firebase.database().ref('time/year').set(year);
+        firebase.database().ref('time/hour').set(hour);
+        firebase.database().ref('time/min').set(min);
       }
     </script>
   </body>
