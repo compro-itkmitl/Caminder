@@ -88,11 +88,11 @@
         var year = $('input[name="year"]').val();
         var hour = $('input[name="hour"]').val();
         var min = $('input[name="min"]').val();
-        firebase.database().ref('time/day').set(day);
-        firebase.database().ref('time/month').set(month);
-        firebase.database().ref('time/year').set(year);
-        firebase.database().ref('time/hour').set(hour);
-        firebase.database().ref('time/min').set(min);
+        firebase.database().ref('time/day').set(parseInt(day));
+        firebase.database().ref('time/month').set(parseInt(month));
+        firebase.database().ref('time/year').set(parseInt(year));
+        firebase.database().ref('time/hour').set(parseInt(hour));
+        firebase.database().ref('time/min').set(parseInt(min));
       }
     </script>
   </body>
