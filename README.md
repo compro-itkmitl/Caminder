@@ -11,11 +11,16 @@
   ---
 # Getting Start
   - เริ่มต้นด้วยการหาอุปกรณ์ที่ต้องการ คือ
-     - Arduino/Uno ![](/Resources/Arduino_1.jpg)
-     - DS3231 RTC ![](/Resources/ds3231.jpg)
-     - I2c LCD ![](/Resources/i2c_lcd.jpg)
-     - NodeMCU ![](/Resources/NodeMCU.jpg)
-     - สายไฟ ![](/Resources/wire.jpg)
+     - Arduino/Uno
+     ![](/Resources/Arduino_1.jpg)
+     - DS3231 RTC
+     ![](/Resources/ds3231.jpg)
+     - I2c LCD
+     ![](/Resources/i2c_lcd.jpg)
+     - NodeMCU
+     ![](/Resources/NodeMCU.jpg)
+     - สายไฟ
+     ![](/Resources/wire.jpg)
 # Teachers
 |ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
