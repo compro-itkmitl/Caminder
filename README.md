@@ -3,16 +3,47 @@
   - โดยที่เวลาใช้ Real Time Clock DS3231
   - ใช้ Arduino ในการเชื่อม RTC และ NodeMCU
   - สามารถตั้งเวลาใน Web-firebase เพื่อตั้งเวลาปลุกได้
-  ---
-## วัตถุประสงค์
+---
+# Objective
   - เพื่อบอกวัน เวลา และ อุนหภูมิของสถานที่นั้นๆ
   - ตั้งเวลาการปลุกนอน หรือตั้งเวลาเพื่อแจ้งเตือนตามวันและเวลาต่างๆในระยะไกลได้
-  ---
-### Getting Start
+---
+# Equipment
   - เริ่มต้นด้วยการหาอุปกรณ์ที่ต้องการ คือ
      - Arduino/Uno
+     ![](/Resources/Arduino_1.jpg)
      - DS3231 RTC
+     ![](/Resources/ds3231.jpg)
+     ![](/Resources/i2c_lcd.jpg)
      - I2c LCD
      - NodeMCU
+     ![](/Resources/NodeMCU.jpg)
      - สายไฟ
+     ![](/Resources/wire.jpg)
+---
+# How to use?
+  - พิมพ์ตั้งเวลาที่จะปลุกหรือแจ้งเตือน
+---
+# How to install
+  ![](/Resources/installing.jpg)
+
+---
+# Team Members
+|  |ชื่อ นามสกุล|GitHub Username|รหัสนักศึกษา|
+|:-:|---------|---------------|---------|
+|![www.facebook.com/tanakorn.panthaikul](/Resources/ohm.jpg)|Tanakorn Panthaikul|[@Tanakornohm](https://github.com/tanakornohm)|60070017|
+|![www.facebook.com/dorn.kubpom](/Resources/dorn.jpg)|Dorn Nutavej|[@dorn123](https://github.com/dorn123)|60070026|
+|![www.facebook.com/nonny](/Resources/nonny.jpg)|Non Ninkham|[@naive555](https://github.com/naive555)|60070036|
+
+---
+# Teachers
+|ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
+|:-:|:-:|
+|![](/Resources/T.Oong.png)|![](/Resources/T.Panwit.png)|
+
+รายงานนี้เป็นส่วนหนึ่งของวิชา Computer Programming (รหัส 06016315)
+
+คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+
+---
 
