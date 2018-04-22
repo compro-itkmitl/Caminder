@@ -2,8 +2,8 @@
 #include <FirebaseArduino.h>
 #include <SoftwareSerial.h>
 
-#define WIFI_SSID "ohmza"
-#define WIFI_PASSWORD "ohmza555"
+#define WIFI_SSID "naive555"
+#define WIFI_PASSWORD "12345678"
 #define FIREBASE_HOST "carminder-63a0d.firebaseio.com"
 #define FIREBASE_AUTH "AEkAhVK9s2as0zvl5b4jLUogp8cV9doVQUrWpLsX"
 
@@ -30,22 +30,12 @@ void loop() {
   int days = Firebase.getInt("time/day");
   int months = Firebase.getInt("time/month");
   int years = Firebase.getInt("time/year");
-  Serial.print(minutes);
-  Serial.print(hours);
-  Serial.print(days);
-  Serial.print(months);
+  Serial.println(minutes);
+  Serial.println(hours);
+  Serial.println(days);
+  Serial.println(months);
   Serial.println(years);
   delay(1000);
-  /*while (NodeSerial.available() > 0){
-    int hour_re = NodeSerial.parseInt();
-    int minu_re = NodeSerial.parseInt();
-    int day_re = NodeSerial.parseInt();
-    int month_re = NodeSerial.parseInt();
-    int year_re = NodeSerial.parseInt();
-    if(NodeSerial.read() == '\n'){
-      Serial.println(hour_re);
-    }
-  }*/
 }
 
 
