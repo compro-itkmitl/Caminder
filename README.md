@@ -34,8 +34,8 @@
 |![www.facebook.com/nonny](/Resources/nonny.jpg)|Non Ninkham|[@naive555](https://github.com/naive555)|60070036|
 
 ---
-## Teachers
-|ผศ. ดร. กิติ์สุชาติ พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
+## Assistant Teachers
+|ผศ. ดร. กิติ์สุชาต พสุภา|ผศ. ดร. ปานวิทย์ ธุวะนุติ|
 |:-:|:-:|
 |![](/Resources/T.Oong.png)|![](/Resources/T.Panwit.png)|
 
