@@ -29,9 +29,9 @@
 ## Team Members
 |  |ชื่อ นามสกุล|GitHub Username|รหัสนักศึกษา|
 |:-:|---------|---------------|---------|
-|![][www.facebook.com/tanakorn.panthaikul](/Resources/ohm.jpg)|Tanakorn Panthaikul|[@Tanakornohm](https://github.com/tanakornohm)|60070017|
-|![][www.facebook.com/dorn.kubpom](/Resources/dorn.jpg)|Dorn Nutavej|[@dorn123](https://github.com/dorn123)|60070026|
-|![][www.facebook.com/nonny](/Resources/nonny.jpg)|Non Ninkham|[@naive555](https://github.com/naive555)|60070036|
+|![www.facebook.com/tanakorn.panthaikul]<img src="/Resources/ohm.jpg" width="100" height="100">|Tanakorn Panthaikul|[@Tanakornohm](https://github.com/tanakornohm)|60070017|
+|![www.facebook.com/dorn.kubpom]<img src="/Resources/dorn.jpg" width="100" height="100">|Dorn Nutavej|[@dorn123](https://github.com/dorn123)|60070026|
+|![www.facebook.com/nonny]<img src="/Resources/nonny.jpg" width="100" height="100">|Non Ninkham|[@naive555](https://github.com/naive555)|60070036|
 
 ---
 ## Assistant Teachers
